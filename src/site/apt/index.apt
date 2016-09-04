@@ -1,0 +1,133 @@
+	-------------------------------------------------------------------------------------------------------------------
+	About
+	-------------------------------------------------------------------------------------------------------------------
+
+Introduction:
+
+	<<Pandora2>> conforms a bundle of jpa-jsf utilities who works together in order to provide base ejb managers and base backing beans controller hierarchy.
+
+What is and what is not:
+
+	First, let's say that <<Pandora2>>:
+
+		* Is not a seam extension.
+
+		* Is not a cdi implementation.
+
+		* Is just a couple of utilities and templates that can be used in any java project in order to generalize some common's patterns behaviors.
+
+		* Take a quick view and you'll find out that p2 is only composed of 70+ java classes and there's not restriction at all for combine these components with any other java technology.
+
+Download:
+
+	<<Pandora2>> can be downloaded:
+
+		* Directly as binary distribution jar file from {{{http://repository.pandora2.com.ar/maven2/com/ebizlink/pandora2/}here.}}
+
+		* As maven2 dependency.
+
+Configure maven dependency:
+
++---------------------------------------------------------------------------------------------------------------------+
+<repository>
+	<id>pandora2</id>
+	<url>http://repository.pandora2.com.ar/maven2/</url>
+</repository>
++---------------------------------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------+
+<dependency>
+	<groupId>com.ebizlink</groupId>
+	<artifactId>pandora2</artifactId>
+	<version>04.xx.xx</version>
+</dependency>
++---------------------------------------------------------------------------------------------------------------------+
+
+Key concept equation:
+
+	* Entity <<models>> + EJB <<managers>> + Managed bean <<controllers>> + JSF2 (facelets, composite components) + primefaces + extensions.
+
+Entity models:
+
+	* {{{http://code.google.com/p/pandora2/source/browse/products/pandora2/trunk/src/main/java/com/ebizlink/pandora2/server/model/BaseModel.java}Base model}}
+
+	* {{{http://code.google.com/p/pandora2/source/browse/products/pandora2/trunk/src/main/java/com/ebizlink/pandora2/server/model/BaseSimpleModel.java}Base simple model}}
+
+	* {{{http://code.google.com/p/pandora2/source/browse/products/pandora2/trunk/src/main/java/com/ebizlink/pandora2/server/model/BaseSummarySimpleModel.java}Base summary simple model}}
+
+	* {{{http://code.google.com/p/pandora2/source/browse/products/pandora2/trunk/src/main/java/com/ebizlink/pandora2/server/model/BaseParentSimpleModel.java}Base parent simple model}}
+
+EJB base:
+
+	* {{{http://code.google.com/p/pandora2/source/browse/products/pandora2/trunk/src/main/java/com/ebizlink/pandora2/server/ejb/BaseEJB.java}Base ejb}}
+
+EJB base (and envers):
+
+	* {{{http://code.google.com/p/pandora2/source/browse/products/pandora2/trunk/src/main/java/com/ebizlink/pandora2/server/model/BaseRevisionModel.java}Base revision model}}
+
+	* {{{http://code.google.com/p/pandora2/source/browse/products/pandora2/trunk/src/main/java/com/ebizlink/pandora2/server/ejb/BaseRevisionManager.java}Base revision manager}}
+
+EJB managers:
+
+	* {{{http://code.google.com/p/pandora2/source/browse/products/pandora2/trunk/src/main/java/com/ebizlink/pandora2/server/ejb/BaseManager.java}Base manager}}
+	
+	* {{{http://code.google.com/p/pandora2/source/browse/products/pandora2/trunk/src/main/java/com/ebizlink/pandora2/server/ejb/BaseManagerEJB.java}Base manager ejb}}
+	
+	* {{{http://code.google.com/p/pandora2/source/browse/products/pandora2/trunk/src/main/java/com/ebizlink/pandora2/server/ejb/BasePersistenceManager.java}Base persistence manager}}
+
+	* {{{http://code.google.com/p/pandora2/source/browse/products/pandora2/trunk/src/main/java/com/ebizlink/pandora2/server/ejb/BasePersistenceManagerEJB.java}Base persistence manager ejb}}
+
+	* {{{http://code.google.com/p/pandora2/source/browse/products/pandora2/trunk/src/main/java/com/ebizlink/pandora2/server/ejb/BaseSimpleManager.java}Base simple manager}}
+
+Components:
+
+	* {{{http://code.google.com/p/pandora2/source/browse/products/pandora2/trunk/src/main/java/com/ebizlink/pandora2/web/component/BaseComponent.java}Base component}}
+
+Crud controllers:
+
+	* {{{http://code.google.com/p/pandora2/source/browse/products/pandora2/trunk/src/main/java/com/ebizlink/pandora2/web/component/controller/BaseCrudController.java}Base crud controller}}
+
+	* {{{http://code.google.com/p/pandora2/source/browse/products/pandora2/trunk/src/main/java/com/ebizlink/pandora2/web/component/controller/BaseManagedCrudController.java}Base managed crud controller}}
+
+	* {{{http://code.google.com/p/pandora2/source/browse/products/pandora2/trunk/src/main/java/com/ebizlink/pandora2/web/component/controller/BaseSimpleManagedCrudController.java}Base simple managed crud controller}}
+
+Operation controllers:
+
+	* {{{http://code.google.com/p/pandora2/source/browse/products/pandora2/trunk/src/main/java/com/ebizlink/pandora2/web/component/controller/BaseOperationController.java}Base operation controller}}
+
+Query controllers:
+
+	* {{{http://code.google.com/p/pandora2/source/browse/products/pandora2/trunk/src/main/java/com/ebizlink/pandora2/web/component/controller/BaseQueryController.java}Base query controller}}
+
+	* {{{http://code.google.com/p/pandora2/source/browse/products/pandora2/trunk/src/main/java/com/ebizlink/pandora2/web/component/controller/BaseSimpleQueryController.java}Base simple query controller}}
+
+Menu controllers:
+
+	* {{{http://code.google.com/p/pandora2/source/browse/products/pandora2/trunk/src/main/java/com/ebizlink/pandora2/web/component/controller/BaseMenuController.java}Base menu controller}}
+
+Autocomplete components:
+
+	* {{{http://code.google.com/p/pandora2/source/browse/products/pandora2/trunk/src/main/java/com/ebizlink/pandora2/web/component/form/BaseAutoCompleteComponent.java}Base autocomplete component}}
+
+	* {{{http://code.google.com/p/pandora2/source/browse/products/pandora2/trunk/src/main/java/com/ebizlink/pandora2/web/component/form/BaseSimpleAutoCompleteComponent.java}Base simple autocomplete component}}
+
+Itemlist components:
+
+	* {{{http://code.google.com/p/pandora2/source/browse/products/pandora2/trunk/src/main/java/com/ebizlink/pandora2/web/component/form/BaseItemListComponent.java}Base item list component}}
+
+	* {{{http://code.google.com/p/pandora2/source/browse/products/pandora2/trunk/src/main/java/com/ebizlink/pandora2/web/component/form/BaseValidableItemListComponent.java}Base validable item list component}}
+
+	* {{{http://code.google.com/p/pandora2/source/browse/products/pandora2/trunk/src/main/java/com/ebizlink/pandora2/web/component/form/BaseModelItemListComponent.java}Base model item list component}}
+
+	* {{{http://code.google.com/p/pandora2/source/browse/products/pandora2/trunk/src/main/java/com/ebizlink/pandora2/web/component/form/BaseDefaultModelItemListComponent.java}Base default model item list component}}
+
+Query components:
+
+	* {{{http://code.google.com/p/pandora2/source/browse/products/pandora2/trunk/src/main/java/com/ebizlink/pandora2/web/component/form/BaseQueryComponent.java}Base query component (primefaces lazy loading support)}}
+
+	* {{{http://code.google.com/p/pandora2/source/browse/products/pandora2/trunk/src/main/java/com/ebizlink/pandora2/web/component/form/BaseSimpleQueryComponent.java}Base simple query component}}
+
+Detail components:
+
+	* {{{http://code.google.com/p/pandora2/source/browse/products/pandora2/trunk/src/main/java/com/ebizlink/pandora2/web/component/form/BaseDetailComponent.java}Base detail component}}
+
+	* {{{http://code.google.com/p/pandora2/source/browse/products/pandora2/trunk/src/main/java/com/ebizlink/pandora2/web/component/form/BaseModelDetailComponent.java}Base model detail component}}
