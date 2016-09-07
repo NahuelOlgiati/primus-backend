@@ -1,5 +1,6 @@
 package com.primus.service.manager.ejb;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.ejb.EJBException;
@@ -10,14 +11,18 @@ import javax.ejb.TransactionManagement;
 import javax.ejb.TransactionManagementType;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Order;
 import javax.persistence.criteria.Path;
 import javax.persistence.criteria.Root;
 
 import com.primus.core.exception.BaseException;
 import com.primus.core.util.CompareUtil;
 import com.primus.model.DocumentType;
+import com.primus.model.DocumentType_;
 import com.primus.model.NaturalTaxPayer;
+import com.primus.model.NaturalTaxPayer_;
 import com.primus.model.embeddable.Document;
+import com.primus.model.embeddable.Document_;
 import com.primus.server.model.support.QueryHint;
 import com.primus.server.util.PredicateBuilder;
 import com.primus.server.util.QueryHintResult;
@@ -49,17 +54,17 @@ public class NaturalTaxPayerManagerEJB extends BaseTaxPayerManagerEJB<NaturalTax
 			final PredicateBuilder pb = new PredicateBuilder(cb);
 			final CriteriaQuery<NaturalTaxPayer> cq = cb.createQuery(getModelClass());
 			final Root<NaturalTaxPayer> naturalTaxPayer = cq.from(getModelClass());
-//			final Path<String> lastName = naturalTaxPayer.get(NaturalTaxPayer_.lastName);
-//			final Path<String> firstName = naturalTaxPayer.get(NaturalTaxPayer_.firstName);
-//			final Path<Document> document = naturalTaxPayer.get("document");
-//			final Path<String> documentNumber = document.get(Document_.documentNumber);
-//			final List<Order> orderList = new ArrayList<Order>();
-//
-//			// Expressions.
-//			cq.where(cb.or(pb.like(lastName, description), pb.like(firstName, description), pb.like(documentNumber, description)));
-//			orderList.add(cb.asc(lastName));
-//			orderList.add(cb.asc(firstName));
-//			cq.orderBy(orderList);
+			final Path<String> lastName = naturalTaxPayer.get(NaturalTaxPayer_.lastName);
+			final Path<String> firstName = naturalTaxPayer.get(NaturalTaxPayer_.firstName);
+			final Path<Document> document = naturalTaxPayer.get("document");
+			final Path<String> documentNumber = document.get(Document_.documentNumber);
+			final List<Order> orderList = new ArrayList<Order>();
+
+			// Expressions.
+			cq.where(cb.or(pb.like(lastName, description), pb.like(firstName, description), pb.like(documentNumber, description)));
+			orderList.add(cb.asc(lastName));
+			orderList.add(cb.asc(firstName));
+			cq.orderBy(orderList);
 
 			// Gets data.
 			queryHintResult = getQueryHintResult(cq, queryHint);
@@ -84,23 +89,23 @@ public class NaturalTaxPayerManagerEJB extends BaseTaxPayerManagerEJB<NaturalTax
 			final CriteriaQuery<NaturalTaxPayer> cq = cb.createQuery(getModelClass());
 			final Root<NaturalTaxPayer> naturalTaxPayer = cq.from(getModelClass());
 
-//			final Path<Document> pd = naturalTaxPayer.get("document");
-//			final Path<String> pdDocumentNumber = pd.get(Document_.documentNumber);
-//			final Path<DocumentType> pdDocumentType = pd.get(Document_.documentType);
-//			final Path<String> pdDocumentTypeDesc = pdDocumentType.get(DocumentType_.description);
-//
-//			final Path<Document> sd = naturalTaxPayer.get("secondaryDocument");
-//			final Path<String> sdDocumentNumber = sd.get(Document_.documentNumber);
-//			final Path<DocumentType> sdDocumentType = sd.get(Document_.documentType);
-//			final Path<String> sdDocumentTypeDesc = sdDocumentType.get(DocumentType_.description);
-//
-//			// Expressions.
-//			cq.distinct(Boolean.TRUE);
-//			cq.where(cb.or(
-//					cb.and(pb.equal(pdDocumentNumber, document.getDocumentNumber()),
-//							pb.equal(pdDocumentTypeDesc, document.getDocumentType().getDescription())),
-//					cb.and(pb.equal(sdDocumentNumber, document.getDocumentNumber()),
-//							pb.equal(sdDocumentTypeDesc, document.getDocumentType().getDescription()))));
+			final Path<Document> pd = naturalTaxPayer.get("document");
+			final Path<String> pdDocumentNumber = pd.get(Document_.documentNumber);
+			final Path<DocumentType> pdDocumentType = pd.get(Document_.documentType);
+			final Path<String> pdDocumentTypeDesc = pdDocumentType.get(DocumentType_.description);
+
+			final Path<Document> sd = naturalTaxPayer.get("secondaryDocument");
+			final Path<String> sdDocumentNumber = sd.get(Document_.documentNumber);
+			final Path<DocumentType> sdDocumentType = sd.get(Document_.documentType);
+			final Path<String> sdDocumentTypeDesc = sdDocumentType.get(DocumentType_.description);
+
+			// Expressions.
+			cq.distinct(Boolean.TRUE);
+			cq.where(cb.or(
+					cb.and(pb.equal(pdDocumentNumber, document.getDocumentNumber()),
+							pb.equal(pdDocumentTypeDesc, document.getDocumentType().getDescription())),
+					cb.and(pb.equal(sdDocumentNumber, document.getDocumentNumber()),
+							pb.equal(sdDocumentTypeDesc, document.getDocumentType().getDescription()))));
 
 			// Gets data.
 			naturalTaxPayerList = getList(cq, queryHint);

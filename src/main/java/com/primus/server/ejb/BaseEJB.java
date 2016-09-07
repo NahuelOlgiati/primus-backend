@@ -3,13 +3,10 @@ package com.primus.server.ejb;
 import java.security.Principal;
 
 import javax.annotation.Resource;
-import javax.ejb.EJB;
 import javax.ejb.SessionContext;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-
 import com.primus.core.exception.BaseException;
-import com.primus.server.model.BaseRevisionModel;
 
 public abstract class BaseEJB {
 	

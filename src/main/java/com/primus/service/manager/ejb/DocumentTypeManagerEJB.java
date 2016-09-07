@@ -8,9 +8,11 @@ import javax.ejb.TransactionManagement;
 import javax.ejb.TransactionManagementType;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Path;
 import javax.persistence.criteria.Root;
 
 import com.primus.model.DocumentType;
+import com.primus.model.DocumentType_;
 import com.primus.server.ejb.BasePersistenceManagerEJB;
 import com.primus.server.model.support.QueryHint;
 import com.primus.server.util.PredicateBuilder;
@@ -42,12 +44,12 @@ public class DocumentTypeManagerEJB extends BasePersistenceManagerEJB<DocumentTy
 			final PredicateBuilder pb = new PredicateBuilder(cb);
 			final CriteriaQuery<DocumentType> cq = cb.createQuery(getModelClass());
 			final Root<DocumentType> documentType = cq.from(getModelClass());
-//			final Path<String> dtDescription = documentType.get(DocumentType_.description);
-//			final Path<String> dtSummaryDescription = documentType.get(DocumentType_.summaryDescription);
+			final Path<String> dtDescription = documentType.get(DocumentType_.description);
+			final Path<String> dtSummaryDescription = documentType.get(DocumentType_.summaryDescription);
 
 			// Expessions.
-//			cq.where(cb.or(pb.like(dtDescription, description), pb.like(dtSummaryDescription, description)));
-//			cq.orderBy(cb.asc(dtDescription));
+			cq.where(cb.or(pb.like(dtDescription, description), pb.like(dtSummaryDescription, description)));
+			cq.orderBy(cb.asc(dtDescription));
 
 			// Gets data.
 			queryHintResult = getQueryHintResult(cq, queryHint);

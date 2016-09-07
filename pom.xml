@@ -12,12 +12,16 @@
 	<packaging>jar</packaging>
 
 	<properties>
-		<version.wildfly.swarm>2016.9</version.wildfly.swarm>
-		<version.postgresql>9.4.1207</version.postgresql>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<failOnMissingWebXml>false</failOnMissingWebXml>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<version.wildfly.swarm>2016.9</version.wildfly.swarm>
+		<version.postgresql>9.4.1207</version.postgresql>
+		<version.json-simple>1.1.1</version.json-simple>
+		<version.hibernate-jpamodelgen>5.2.2.Final</version.hibernate-jpamodelgen>
+		<version.maven-processor-plugin>3.1.0</version.maven-processor-plugin>
+		<version.maven-compiler-plugin>2.5.1</version.maven-compiler-plugin>
 	</properties>
 
 	<dependencyManagement>
@@ -77,19 +81,21 @@
 		<dependency>
 			<groupId>com.googlecode.json-simple</groupId>
 			<artifactId>json-simple</artifactId>
-			<version>1.1.1</version>
+			<version>${version.json-simple}</version>
 		</dependency>
 
 	</dependencies>
 
 	<build>
 		<finalName>primus-backend</finalName>
+
 		<resources>
 			<resource>
 				<directory>src/main/resources</directory>
 				<filtering>true</filtering>
 			</resource>
 		</resources>
+
 		<plugins>
 			<plugin>
 				<groupId>org.wildfly.swarm</groupId>
@@ -110,6 +116,53 @@
 					</execution>
 				</executions>
 			</plugin>
+
+			<plugin>
+				<groupId>org.bsc.maven</groupId>
+				<artifactId>maven-processor-plugin</artifactId>
+				<version>${version.maven-processor-plugin}</version>
+				<inherited>true</inherited>
+				<executions>
+					<execution>
+						<id>process</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>process</goal>
+						</goals>
+						<configuration>
+							<processors>
+								<processor>org.hibernate.jpamodelgen.JPAMetaModelEntityProcessor</processor>
+							</processors>
+							<compilerArguments>
+								-AfullyAnnotationConfigured=true
+								-AaddSuppressWarningsAnnotation=true
+							</compilerArguments>
+							<outputDirectory>target/generated-sources/annotations</outputDirectory>
+						</configuration>
+					</execution>
+				</executions>
+				<dependencies>
+					<dependency>
+						<groupId>org.hibernate</groupId>
+						<artifactId>hibernate-jpamodelgen</artifactId>
+						<version>${version.hibernate-jpamodelgen}</version>
+						<scope>compile</scope>
+					</dependency>
+				</dependencies>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${version.maven-compiler-plugin}</version>
+				<inherited>true</inherited>
+				<configuration>
+					<source>${maven.compiler.source}</source>
+					<target>${maven.compiler.target}</target>
+					<compilerArgument>-proc:none</compilerArgument>
+				</configuration>
+			</plugin>
+
 		</plugins>
 	</build>
 
