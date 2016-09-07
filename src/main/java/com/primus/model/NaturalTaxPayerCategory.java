@@ -4,7 +4,7 @@ import javax.persistence.Cacheable;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
-import com.primus.model.mpa.TaxAgentClassification;
+import com.primus.model.msc.TaxAgentClassification;
 
 @Entity
 @Table(name = "osiris_tax_naturaltaxpayercategory")

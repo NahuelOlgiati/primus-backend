@@ -15,7 +15,7 @@ import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
 import com.primus.core.msg.MessageBuilder;
-import com.primus.model.composite.Document;
+import com.primus.model.embeddable.Document;
 import com.primus.model.enumeration.TaxPayerTypeEnum;
 import com.primus.server.exception.ValidationException;
 

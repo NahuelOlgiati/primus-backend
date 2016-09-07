@@ -7,7 +7,7 @@ import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 import javax.persistence.SequenceGenerator;
 
-import com.primus.model.composite.Contact;
+import com.primus.model.embeddable.Contact;
 import com.primus.server.exception.ValidationException;
 import com.primus.server.model.BaseModel;
 

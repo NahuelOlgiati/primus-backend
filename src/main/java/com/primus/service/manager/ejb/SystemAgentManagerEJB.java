@@ -12,7 +12,7 @@ import javax.persistence.criteria.Root;
 
 import com.primus.core.util.CompareUtil;
 import com.primus.model.SystemAgent;
-import com.primus.model.composite.Document;
+import com.primus.model.embeddable.Document;
 import com.primus.server.ejb.BasePersistenceManagerEJB;
 import com.primus.server.exception.ManagerException;
 import com.primus.server.util.PredicateBuilder;

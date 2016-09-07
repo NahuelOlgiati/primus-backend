@@ -16,7 +16,7 @@ import javax.persistence.TemporalType;
 
 import com.primus.core.msg.MessageBuilder;
 import com.primus.core.util.CompareUtil;
-import com.primus.model.composite.Document;
+import com.primus.model.embeddable.Document;
 import com.primus.model.enumeration.GenderEnum;
 import com.primus.model.enumeration.TaxPayerTypeEnum;
 import com.primus.server.exception.ValidationException;

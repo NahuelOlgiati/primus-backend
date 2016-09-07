@@ -1,4 +1,4 @@
-package com.primus.model.mpa;
+package com.primus.model.msc;
 
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;

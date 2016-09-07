@@ -1,4 +1,4 @@
-package com.primus.model.mpa;
+package com.primus.model.msc;
 
 import javax.persistence.Embedded;
 import javax.persistence.GeneratedValue;
@@ -7,7 +7,7 @@ import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 import javax.persistence.SequenceGenerator;
 
-import com.primus.model.composite.Document;
+import com.primus.model.embeddable.Document;
 import com.primus.server.exception.ValidationException;
 import com.primus.server.model.BaseModel;
 

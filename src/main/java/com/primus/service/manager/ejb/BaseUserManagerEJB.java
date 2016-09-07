@@ -22,7 +22,7 @@ import com.primus.model.DocumentType;
 import com.primus.model.Profile;
 import com.primus.model.SystemAgent;
 import com.primus.model.User;
-import com.primus.model.composite.Document;
+import com.primus.model.embeddable.Document;
 import com.primus.server.ejb.BasePersistenceManagerEJB;
 import com.primus.server.exception.ManagerException;
 import com.primus.server.exception.ValidationException;

@@ -5,8 +5,8 @@ import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 
-import com.primus.model.composite.Document;
-import com.primus.model.mpa.Agent;
+import com.primus.model.embeddable.Document;
+import com.primus.model.msc.Agent;
 import com.primus.server.ejb.BasePersistenceManagerEJB;
 import com.primus.server.util.PredicateBuilder;
 import com.primus.service.manager.local.AgentManagerLocal;

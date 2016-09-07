@@ -1,4 +1,4 @@
-package com.primus.model.composite;
+package com.primus.model.embeddable;
 
 import java.io.Serializable;
 

@@ -17,7 +17,7 @@ import com.primus.core.exception.BaseException;
 import com.primus.core.util.CompareUtil;
 import com.primus.model.DocumentType;
 import com.primus.model.NaturalTaxPayer;
-import com.primus.model.composite.Document;
+import com.primus.model.embeddable.Document;
 import com.primus.server.model.support.QueryHint;
 import com.primus.server.util.PredicateBuilder;
 import com.primus.server.util.QueryHintResult;

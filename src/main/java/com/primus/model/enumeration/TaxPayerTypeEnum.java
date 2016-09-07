@@ -1,6 +1,7 @@
 package com.primus.model.enumeration;
 
 import com.primus.server.model.mpi.LabeledValued;
+import com.primus.service.msg.DBSMsgHandler;
 
 public enum TaxPayerTypeEnum implements LabeledValued<TaxPayerTypeEnum>
 {
@@ -13,8 +14,7 @@ public enum TaxPayerTypeEnum implements LabeledValued<TaxPayerTypeEnum>
 	@Override
 	public String getLabel()
 	{
-//		return DBSMsgHandler.getMsg(this);
-		return null;
+		return DBSMsgHandler.getMsg(this);
 	}
 
 	/**

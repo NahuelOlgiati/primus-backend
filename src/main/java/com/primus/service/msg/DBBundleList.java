@@ -4,10 +4,9 @@ import java.util.ListResourceBundle;
 
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
+
 import com.primus.service.manager.local.DBBundleManagerLocal;
 
-/**
- */
 public class DBBundleList extends ListResourceBundle {
 	/**
 	 */

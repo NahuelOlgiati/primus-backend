@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.primus.model.Profile;
 import com.primus.model.User;
-import com.primus.model.composite.Document;
+import com.primus.model.embeddable.Document;
 import com.primus.server.ejb.BasePersistenceManager;
 import com.primus.server.ejb.BaseSimpleManager;
 import com.primus.server.exception.ManagerException;

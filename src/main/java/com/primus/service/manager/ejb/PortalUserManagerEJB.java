@@ -17,7 +17,7 @@ import com.primus.core.exception.BaseException;
 import com.primus.core.util.CompareUtil;
 import com.primus.model.PortalUser;
 import com.primus.model.TaxPayer;
-import com.primus.model.composite.Document;
+import com.primus.model.embeddable.Document;
 import com.primus.model.enumeration.TaxPayerTypeEnum;
 import com.primus.server.exception.ManagerException;
 import com.primus.server.util.PredicateBuilder;

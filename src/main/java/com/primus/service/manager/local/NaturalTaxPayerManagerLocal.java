@@ -5,7 +5,7 @@ import java.util.List;
 import javax.ejb.Local;
 
 import com.primus.model.NaturalTaxPayer;
-import com.primus.model.composite.Document;
+import com.primus.model.embeddable.Document;
 import com.primus.server.ejb.BaseSimpleManager;
 import com.primus.server.model.support.QueryHint;
 

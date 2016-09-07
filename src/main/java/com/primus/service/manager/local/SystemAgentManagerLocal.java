@@ -3,7 +3,7 @@ package com.primus.service.manager.local;
 import javax.ejb.Local;
 
 import com.primus.model.SystemAgent;
-import com.primus.model.composite.Document;
+import com.primus.model.embeddable.Document;
 import com.primus.server.ejb.BasePersistenceManager;
 import com.primus.server.exception.ManagerException;
 

@@ -23,7 +23,7 @@ import com.primus.model.NaturalTaxPayer;
 import com.primus.model.PortalUser;
 import com.primus.model.Profile;
 import com.primus.model.SystemAgent;
-import com.primus.model.composite.Document;
+import com.primus.model.embeddable.Document;
 import com.primus.rest.app.AuthenticationContext;
 import com.primus.rest.util.ResponseUtil;
 import com.primus.server.ejb.BaseEJB;
