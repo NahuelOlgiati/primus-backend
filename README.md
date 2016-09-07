@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Commands
 mvn clean package
 mvn wildfly-swarm:run
@@ -12,3 +13,7 @@ https://github.com/mshauneu/chrome-swagger-ui
 
 # Info
 http://ksoong.org/wildfly-swarm
+=======
+TODO
+http://ksoong.org/wildfly-swarm
+>>>>>>> 78d295c2db72eaff999d093caa4d49f53f8387cb
