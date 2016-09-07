@@ -1,4 +1,4 @@
-package com.ebizlink.pandora2.server.model.support;
+package com.primus.server.model.support;
 
 import java.io.Serializable;
 

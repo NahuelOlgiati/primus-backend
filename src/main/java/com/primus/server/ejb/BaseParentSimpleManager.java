@@ -1,8 +1,9 @@
-package com.ebizlink.pandora2.server.ejb;
+package com.primus.server.ejb;
 
 import java.util.List;
-import com.ebizlink.pandora2.server.model.BaseParentSimpleModel;
-import com.ebizlink.pandora2.server.model.support.QueryHint;
+
+import com.primus.server.model.BaseParentSimpleModel;
+import com.primus.server.model.support.QueryHint;
 
 public interface BaseParentSimpleManager<T extends BaseParentSimpleModel<T>> extends BaseSimpleManager<T>
 {

@@ -1,9 +1,10 @@
-package com.ebizlink.pandora2.server.model;
+package com.primus.server.model;
 
 import java.io.Serializable;
-import com.ebizlink.pandora2.server.model.mpi.Describable;
-import com.ebizlink.pandora2.server.model.mpi.Manageable;
-import com.ebizlink.pandora2.server.model.mpi.Validable;
+
+import com.primus.server.model.mpi.Describable;
+import com.primus.server.model.mpi.Manageable;
+import com.primus.server.model.mpi.Validable;
 
 @SuppressWarnings("serial")
 public abstract class BaseModel implements Manageable, Validable, Describable, Serializable

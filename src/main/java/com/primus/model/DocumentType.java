@@ -13,11 +13,11 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
-import com.ebizlink.pandora2.core.msg.MessageBuilder;
-import com.ebizlink.pandora2.core.util.CharUtil;
-import com.ebizlink.pandora2.core.util.CompareUtil;
-import com.ebizlink.pandora2.server.exception.ValidationException;
-import com.ebizlink.pandora2.server.model.BaseSummarySimpleModel;
+import com.primus.core.msg.MessageBuilder;
+import com.primus.core.util.CharUtil;
+import com.primus.core.util.CompareUtil;
+import com.primus.server.exception.ValidationException;
+import com.primus.server.model.BaseSummarySimpleModel;
 
 @Entity
 @Table(name = "adonis_config_documenttype", uniqueConstraints = {

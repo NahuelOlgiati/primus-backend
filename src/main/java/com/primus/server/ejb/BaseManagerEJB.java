@@ -1,15 +1,16 @@
-package com.ebizlink.pandora2.server.ejb;
+package com.primus.server.ejb;
 
 import java.util.List;
 import javax.ejb.EJBException;
 import javax.persistence.NoResultException;
 import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaQuery;
-import com.ebizlink.pandora2.core.util.CompareUtil;
-import com.ebizlink.pandora2.server.ejb.util.JPAUtil;
-import com.ebizlink.pandora2.server.model.BaseModel;
-import com.ebizlink.pandora2.server.model.support.QueryHint;
-import com.ebizlink.pandora2.web.util.QueryHintResult;
+
+import com.primus.core.util.CompareUtil;
+import com.primus.server.model.BaseModel;
+import com.primus.server.model.support.QueryHint;
+import com.primus.server.util.JPAUtil;
+import com.primus.server.util.QueryHintResult;
 
 public abstract class BaseManagerEJB<T extends BaseModel> extends BaseEJB implements BaseManager<T>
 {

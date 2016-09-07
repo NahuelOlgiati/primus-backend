@@ -1,4 +1,4 @@
-package com.ebizlink.pandora2.server.ejb.util;
+package com.primus.server.util;
 
 import javax.persistence.criteria.CriteriaBuilder;
 

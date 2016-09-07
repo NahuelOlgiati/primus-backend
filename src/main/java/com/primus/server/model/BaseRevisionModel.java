@@ -1,4 +1,4 @@
-package com.ebizlink.pandora2.server.model;
+package com.primus.server.model;
 
 import java.io.Serializable;
 import java.util.Date;

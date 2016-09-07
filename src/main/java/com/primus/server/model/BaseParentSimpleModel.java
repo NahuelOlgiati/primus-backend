@@ -1,11 +1,11 @@
-package com.ebizlink.pandora2.server.model;
+package com.primus.server.model;
 
-import com.ebizlink.pandora2.core.msg.MessageBuilder;
-import com.ebizlink.pandora2.core.msg.enumeration.ModelMsgEnum;
-import com.ebizlink.pandora2.core.msg.util.PM;
-import com.ebizlink.pandora2.core.util.CharUtil;
-import com.ebizlink.pandora2.core.util.CompareUtil;
-import com.ebizlink.pandora2.server.exception.ValidationException;
+import com.primus.core.msg.MessageBuilder;
+import com.primus.core.msg.enumeration.ModelMsgEnum;
+import com.primus.core.util.CharUtil;
+import com.primus.core.util.CompareUtil;
+import com.primus.server.exception.ValidationException;
+import com.primus.service.msg.DBSMsgHandler;
 
 @SuppressWarnings("serial")
 public abstract class BaseParentSimpleModel<T extends BaseParentSimpleModel<T>> extends BaseSimpleModel
@@ -42,7 +42,7 @@ public abstract class BaseParentSimpleModel<T extends BaseParentSimpleModel<T>> 
 			{
 				if (p.equals(this))
 				{
-					mb.addMessage(PM.getMe().getMsg(ModelMsgEnum.INVALID_PARENT, p.getDescription()));
+					mb.addMessage(DBSMsgHandler.getMsg(ModelMsgEnum.INVALID_PARENT, p.getDescription()));
 				}
 			}
 		}

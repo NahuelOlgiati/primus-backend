@@ -10,11 +10,11 @@ import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 
-import com.ebizlink.pandora2.server.ejb.BasePersistenceManagerEJB;
-import com.ebizlink.pandora2.server.ejb.util.PredicateBuilder;
-import com.ebizlink.pandora2.server.model.support.QueryHint;
-import com.ebizlink.pandora2.web.util.QueryHintResult;
 import com.primus.model.DocumentType;
+import com.primus.server.ejb.BasePersistenceManagerEJB;
+import com.primus.server.model.support.QueryHint;
+import com.primus.server.util.PredicateBuilder;
+import com.primus.server.util.QueryHintResult;
 import com.primus.service.manager.local.DocumentTypeManagerLocal;
 
 @Stateless

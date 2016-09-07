@@ -1,16 +1,17 @@
-package com.ebizlink.pandora2.server.ejb;
+package com.primus.server.ejb;
 
 import javax.annotation.PostConstruct;
 import javax.ejb.EJBException;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
-import com.ebizlink.pandora2.core.exception.BaseException;
-import com.ebizlink.pandora2.core.msg.enumeration.DatabaseMsgEnum;
-import com.ebizlink.pandora2.core.msg.util.PM;
-import com.ebizlink.pandora2.core.util.CompareUtil;
-import com.ebizlink.pandora2.server.exception.ManagerException;
-import com.ebizlink.pandora2.server.exception.ValidationException;
-import com.ebizlink.pandora2.server.model.BaseModel;
+
+import com.primus.core.exception.BaseException;
+import com.primus.core.msg.enumeration.DatabaseMsgEnum;
+import com.primus.core.util.CompareUtil;
+import com.primus.server.exception.ManagerException;
+import com.primus.server.exception.ValidationException;
+import com.primus.server.model.BaseModel;
+import com.primus.service.msg.DBSMsgHandler;
 
 public abstract class BasePersistenceManagerEJB<T extends BaseModel> extends BaseManagerEJB<T> implements BasePersistenceManager<T>
 {
@@ -81,7 +82,7 @@ public abstract class BasePersistenceManagerEJB<T extends BaseModel> extends Bas
 		{
 			if (CompareUtil.isEmpty(model = get(modelID)))
 			{
-				throw new ValidationException(PM.getMe().getMsg(DatabaseMsgEnum.RECORD_NOT_FOUND));
+				throw new ValidationException(DBSMsgHandler.getMsg(DatabaseMsgEnum.RECORD_NOT_FOUND));
 			}
 			doBeforeDelete(model);
 			doDelete(model);

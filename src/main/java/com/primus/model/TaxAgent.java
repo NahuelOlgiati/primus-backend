@@ -9,12 +9,12 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.MappedSuperclass;
 
-import com.ebizlink.pandora2.core.msg.MessageBuilder;
-import com.ebizlink.pandora2.core.util.CompareUtil;
-import com.ebizlink.pandora2.server.exception.ValidationException;
+import com.primus.core.msg.MessageBuilder;
+import com.primus.core.util.CompareUtil;
 import com.primus.model.composite.Address;
 import com.primus.model.composite.Document;
 import com.primus.model.mpa.Agent;
+import com.primus.server.exception.ValidationException;
 
 @MappedSuperclass
 // @Audited

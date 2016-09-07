@@ -1,4 +1,4 @@
-package com.ebizlink.pandora2.core.util;
+package com.primus.core.util;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

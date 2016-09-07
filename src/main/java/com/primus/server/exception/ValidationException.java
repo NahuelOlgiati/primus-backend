@@ -1,8 +1,9 @@
-package com.ebizlink.pandora2.server.exception;
+package com.primus.server.exception;
 
 import java.util.List;
 import javax.ejb.ApplicationException;
-import com.ebizlink.pandora2.core.exception.BaseException;
+
+import com.primus.core.exception.BaseException;
 
 @ApplicationException(rollback = true)
 @SuppressWarnings("serial")

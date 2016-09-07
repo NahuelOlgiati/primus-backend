@@ -9,7 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
-import com.ebizlink.pandora2.server.model.BaseSimpleModel;
+import com.primus.server.model.BaseSimpleModel;
 
 @Entity
 @Table(name = "adonis_erp_bank")

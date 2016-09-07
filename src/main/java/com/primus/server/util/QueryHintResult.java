@@ -1,4 +1,4 @@
-package com.ebizlink.pandora2.web.util;
+package com.primus.server.util;
 
 import java.math.BigInteger;
 import java.util.ArrayList;

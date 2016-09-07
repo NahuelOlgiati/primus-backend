@@ -4,11 +4,11 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
-import com.ebizlink.pandora2.core.msg.MessageBuilder;
-import com.ebizlink.pandora2.core.util.CompareUtil;
-import com.ebizlink.pandora2.server.exception.ValidationException;
+import com.primus.core.msg.MessageBuilder;
+import com.primus.core.util.CompareUtil;
 import com.primus.model.composite.Document;
 import com.primus.model.mpa.Agent;
+import com.primus.server.exception.ValidationException;
 
 @Entity
 @Table(name = "adonis_admin_systemagent")

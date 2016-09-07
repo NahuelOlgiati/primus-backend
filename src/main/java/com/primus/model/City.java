@@ -13,11 +13,10 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
-//import com.ebizlink.adonis.common.service.msg.DBSMsgHandler;
-import com.ebizlink.pandora2.core.msg.MessageBuilder;
-import com.ebizlink.pandora2.core.util.CompareUtil;
-import com.ebizlink.pandora2.server.exception.ValidationException;
-import com.ebizlink.pandora2.server.model.BaseSimpleModel;
+import com.primus.core.msg.MessageBuilder;
+import com.primus.core.util.CompareUtil;
+import com.primus.server.exception.ValidationException;
+import com.primus.server.model.BaseSimpleModel;
 
 @Entity
 @Table(name = "adonis_config_city", uniqueConstraints = @UniqueConstraint(columnNames = {"districtID", "description"}))

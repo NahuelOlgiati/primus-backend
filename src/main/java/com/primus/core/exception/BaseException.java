@@ -1,9 +1,10 @@
-package com.ebizlink.pandora2.core.exception;
+package com.primus.core.exception;
 
 import java.util.Arrays;
 import java.util.List;
-import com.ebizlink.pandora2.core.util.CharUtil;
-import com.ebizlink.pandora2.core.util.CompareUtil;
+
+import com.primus.core.util.CharUtil;
+import com.primus.core.util.CompareUtil;
 
 @SuppressWarnings("serial")
 public abstract class BaseException extends Exception

@@ -7,9 +7,9 @@ import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 import javax.persistence.SequenceGenerator;
 
-import com.ebizlink.pandora2.server.exception.ValidationException;
-import com.ebizlink.pandora2.server.model.BaseModel;
 import com.primus.model.composite.Contact;
+import com.primus.server.exception.ValidationException;
+import com.primus.server.model.BaseModel;
 
 @MappedSuperclass
 @SuppressWarnings("serial")

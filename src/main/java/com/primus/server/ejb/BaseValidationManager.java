@@ -1,7 +1,7 @@
-package com.ebizlink.pandora2.server.ejb;
+package com.primus.server.ejb;
 
-import com.ebizlink.pandora2.core.exception.BaseException;
-import com.ebizlink.pandora2.server.model.BaseModel;
+import com.primus.core.exception.BaseException;
+import com.primus.server.model.BaseModel;
 
 public interface BaseValidationManager
 {

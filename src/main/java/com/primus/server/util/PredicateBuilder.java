@@ -1,4 +1,4 @@
-package com.ebizlink.pandora2.server.ejb.util;
+package com.primus.server.util;
 
 import java.math.BigDecimal;
 import java.util.Date;
@@ -7,8 +7,9 @@ import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.Expression;
 import javax.persistence.criteria.Path;
 import javax.persistence.criteria.Predicate;
-import com.ebizlink.pandora2.core.util.CompareUtil;
-import com.ebizlink.pandora2.server.model.BaseModel;
+
+import com.primus.core.util.CompareUtil;
+import com.primus.server.model.BaseModel;
 
 public final class PredicateBuilder extends ExpressionBuilder
 {

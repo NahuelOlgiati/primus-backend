@@ -1,8 +1,8 @@
 package com.primus.service.manager.local;
 
-import com.ebizlink.pandora2.server.ejb.BasePersistenceManager;
 import com.primus.model.composite.Document;
 import com.primus.model.mpa.Agent;
+import com.primus.server.ejb.BasePersistenceManager;
 
 public interface AgentManagerLocal<T extends Agent> extends BasePersistenceManager<T>
 {

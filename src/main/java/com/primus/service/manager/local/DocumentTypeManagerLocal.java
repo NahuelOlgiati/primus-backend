@@ -2,9 +2,9 @@ package com.primus.service.manager.local;
 
 import javax.ejb.Local;
 
-import com.ebizlink.pandora2.server.ejb.BasePersistenceManager;
-import com.ebizlink.pandora2.server.ejb.BaseSimpleManager;
 import com.primus.model.DocumentType;
+import com.primus.server.ejb.BasePersistenceManager;
+import com.primus.server.ejb.BaseSimpleManager;
 
 @Local
 public interface DocumentTypeManagerLocal

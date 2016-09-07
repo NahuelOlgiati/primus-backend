@@ -1,7 +1,6 @@
 package com.primus.model.enumeration;
 
-//import com.ebizlink.adonis.common.service.msg.DBSMsgHandler;
-import com.ebizlink.pandora2.server.model.mpi.LabeledValued;
+import com.primus.server.model.mpi.LabeledValued;
 
 public enum TaxPayerTypeEnum implements LabeledValued<TaxPayerTypeEnum>
 {

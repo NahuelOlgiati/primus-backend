@@ -1,6 +1,6 @@
-package com.ebizlink.pandora2.core.msg.util;
+package com.primus.core.msg.util;
 
-import com.ebizlink.pandora2.core.msg.MessageHandler;
+import com.primus.core.msg.MessageHandler;
 
 public final class PM extends MessageHandler
 {

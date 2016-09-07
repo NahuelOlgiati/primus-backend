@@ -9,10 +9,10 @@ import javax.persistence.ManyToOne;
 import javax.persistence.MappedSuperclass;
 import javax.persistence.SequenceGenerator;
 
-import com.ebizlink.pandora2.core.msg.MessageBuilder;
-import com.ebizlink.pandora2.core.util.CompareUtil;
-import com.ebizlink.pandora2.server.exception.ValidationException;
-import com.ebizlink.pandora2.server.model.BaseModel;
+import com.primus.core.msg.MessageBuilder;
+import com.primus.core.util.CompareUtil;
+import com.primus.server.exception.ValidationException;
+import com.primus.server.model.BaseModel;
 
 @MappedSuperclass
 @SuppressWarnings("serial")

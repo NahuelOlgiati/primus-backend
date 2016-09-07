@@ -10,12 +10,12 @@ import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 
-import com.ebizlink.pandora2.core.util.CompareUtil;
-import com.ebizlink.pandora2.server.ejb.BasePersistenceManagerEJB;
-import com.ebizlink.pandora2.server.ejb.util.PredicateBuilder;
-import com.ebizlink.pandora2.server.exception.ManagerException;
+import com.primus.core.util.CompareUtil;
 import com.primus.model.SystemAgent;
 import com.primus.model.composite.Document;
+import com.primus.server.ejb.BasePersistenceManagerEJB;
+import com.primus.server.exception.ManagerException;
+import com.primus.server.util.PredicateBuilder;
 import com.primus.service.manager.local.SystemAgentManagerLocal;
 
 @Stateless

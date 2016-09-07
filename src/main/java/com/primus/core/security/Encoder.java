@@ -1,8 +1,9 @@
-package com.ebizlink.pandora2.core.security;
+package com.primus.core.security;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import com.ebizlink.pandora2.core.security.enumeration.EncodeTypeEnum;
+
+import com.primus.core.security.enumeration.EncodeTypeEnum;
 import com.thoughtworks.xstream.core.util.Base64Encoder;
 
 public final class Encoder

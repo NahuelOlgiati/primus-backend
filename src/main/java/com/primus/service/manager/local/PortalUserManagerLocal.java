@@ -2,10 +2,10 @@ package com.primus.service.manager.local;
 
 import javax.ejb.Local;
 
-import com.ebizlink.pandora2.server.exception.ManagerException;
 import com.primus.model.PortalUser;
 import com.primus.model.composite.Document;
 import com.primus.model.enumeration.TaxPayerTypeEnum;
+import com.primus.server.exception.ManagerException;
 
 
 @Local

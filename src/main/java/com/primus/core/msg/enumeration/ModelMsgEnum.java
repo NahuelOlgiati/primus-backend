@@ -1,4 +1,4 @@
-package com.ebizlink.pandora2.core.msg.enumeration;
+package com.primus.core.msg.enumeration;
 
 public enum ModelMsgEnum
 {

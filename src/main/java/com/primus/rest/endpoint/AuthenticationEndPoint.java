@@ -17,10 +17,7 @@ import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-import com.ebizlink.pandora2.core.util.CompareUtil;
-import com.ebizlink.pandora2.server.ejb.BaseEJB;
-import com.ebizlink.pandora2.server.exception.ManagerException;
-import com.ebizlink.pandora2.server.exception.ValidationException;
+import com.primus.core.util.CompareUtil;
 import com.primus.model.DocumentType;
 import com.primus.model.NaturalTaxPayer;
 import com.primus.model.PortalUser;
@@ -29,15 +26,23 @@ import com.primus.model.SystemAgent;
 import com.primus.model.composite.Document;
 import com.primus.rest.app.AuthenticationContext;
 import com.primus.rest.util.ResponseUtil;
+import com.primus.server.ejb.BaseEJB;
+import com.primus.server.exception.ManagerException;
+import com.primus.server.exception.ValidationException;
 import com.primus.service.manager.local.DocumentTypeManagerLocal;
 import com.primus.service.manager.local.NaturalTaxPayerManagerLocal;
 import com.primus.service.manager.local.PortalUserManagerLocal;
 import com.primus.service.manager.local.SystemAgentManagerLocal;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
 
 @Stateless
 @Path("/authentication")
-public class AuthenticationEndPoint extends BaseEJB
-{
+@Api(value = "authentication")
+public class AuthenticationEndPoint extends BaseEJB {
 	@Inject
 	private AuthenticationContext authenticationCTX;
 
@@ -52,13 +57,15 @@ public class AuthenticationEndPoint extends BaseEJB
 
 	@POST
 	@Path("/signup")
+	@ApiOperation(value = "signup", notes = "Crea Cuenta de user")
+	@ApiResponses(value = { @ApiResponse(code = 405, message = "Invalid input", response = Response.class) })
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-	public Response signup(@FormParam("email") String email, @FormParam("username") String username, @FormParam("password") String password)
-	{
-		try
-		{
-			// final PortalUser newPortalUser = getDummyNewPortalUser(email, username, password);
+	public Response signup(@ApiParam @FormParam("email") String email, @ApiParam @FormParam("username") String username,
+			@ApiParam @FormParam("password") String password) {
+		try {
+			// final PortalUser newPortalUser = getDummyNewPortalUser(email,
+			// username, password);
 			// portalUserML.save(newPortalUser);
 			// em.flush();
 			// return Response.ok(newPortalUser).build();
@@ -75,25 +82,26 @@ public class AuthenticationEndPoint extends BaseEJB
 		}
 		// catch (ManagerException e)
 		// {
-		// final String errorResponse = errorResponse(e.getMessages().toString());
-		// return Response.status(Status.INTERNAL_SERVER_ERROR).entity(errorResponse).type(MediaType.APPLICATION_JSON).build();
+		// final String errorResponse =
+		// errorResponse(e.getMessages().toString());
+		// return
+		// Response.status(Status.INTERNAL_SERVER_ERROR).entity(errorResponse).type(MediaType.APPLICATION_JSON).build();
 		// }
-		catch (Exception e)
-		{
+		catch (Exception e) {
 			return ResponseUtil.fatalException();
 		}
 	}
 
 	/**
 	 */
-	private PortalUser getDummyNewPortalUser(String email, String username, String password) throws ManagerException
-	{
+	private PortalUser getDummyNewPortalUser(String email, String username, String password) throws ManagerException {
 		final NaturalTaxPayer naturalTaxPayer = naturalTaxPayerML.get(23l);
 		final DocumentType documentType = documentTypeML.get(1l);
 		final SystemAgent systemAgent = new SystemAgent(new Document(documentType, "212121212121"), username, "caca");
-		final SystemAgent systemAgentManaged = systemAgentML.getOrCreate(systemAgent.getDocument(), systemAgent.getFirstName(),
-				systemAgent.getLastName());
-		final PortalUser newPortalUser = new PortalUser(username, password, new ArrayList<Profile>(), email, naturalTaxPayer);
+		final SystemAgent systemAgentManaged = systemAgentML.getOrCreate(systemAgent.getDocument(),
+				systemAgent.getFirstName(), systemAgent.getLastName());
+		final PortalUser newPortalUser = new PortalUser(username, password, new ArrayList<Profile>(), email,
+				naturalTaxPayer);
 		newPortalUser.setSystemAgent(systemAgentManaged);
 		return newPortalUser;
 	}
@@ -102,27 +110,21 @@ public class AuthenticationEndPoint extends BaseEJB
 	@Path("/signin")
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-	public Response signin(@FormParam("username") String username, @FormParam("password") String password, @Context HttpServletRequest servletRequest)
-	{
-		try
-		{
+	public Response signin(@FormParam("username") String username, @FormParam("password") String password,
+			@Context HttpServletRequest servletRequest) {
+		try {
 			final PortalUser user = portalUserML.getFULL(username);
 			user.getTaxPayer().initLazyElements();
-			if (CompareUtil.isEmpty(user))
-			{
+			if (CompareUtil.isEmpty(user)) {
 				return ResponseUtil.notFound();
 			}
 
 			servletRequest.login(username, password); // Jaas
 			String token = authenticationCTX.register(user);
 			return ResponseUtil.success(token);
-		}
-		catch (ServletException e)
-		{
+		} catch (ServletException e) {
 			return ResponseUtil.notFound();
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			return ResponseUtil.fatalException();
 		}
 	}

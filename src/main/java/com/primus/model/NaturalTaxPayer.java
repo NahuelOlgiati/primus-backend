@@ -14,13 +14,12 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-//import com.ebizlink.adonis.common.service.msg.DBSMsgHandler;
-import com.ebizlink.pandora2.core.msg.MessageBuilder;
-import com.ebizlink.pandora2.core.util.CompareUtil;
-import com.ebizlink.pandora2.server.exception.ValidationException;
+import com.primus.core.msg.MessageBuilder;
+import com.primus.core.util.CompareUtil;
 import com.primus.model.composite.Document;
 import com.primus.model.enumeration.GenderEnum;
 import com.primus.model.enumeration.TaxPayerTypeEnum;
+import com.primus.server.exception.ValidationException;
 
 @Entity
 @Table(name = "osiris_tax_naturaltaxpayer")

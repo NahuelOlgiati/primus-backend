@@ -17,10 +17,10 @@ import javax.persistence.ManyToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
-import com.ebizlink.pandora2.core.msg.MessageBuilder;
-import com.ebizlink.pandora2.core.util.CompareUtil;
-import com.ebizlink.pandora2.server.exception.ValidationException;
-import com.ebizlink.pandora2.server.model.BaseModel;
+import com.primus.core.msg.MessageBuilder;
+import com.primus.core.util.CompareUtil;
+import com.primus.server.exception.ValidationException;
+import com.primus.server.model.BaseModel;
 
 @Entity
 @Table(name = "adonis_admin_profile")

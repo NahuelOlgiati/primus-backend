@@ -1,6 +1,6 @@
-package com.ebizlink.pandora2.server.model.mpi;
+package com.primus.server.model.mpi;
 
-import com.ebizlink.pandora2.server.exception.ValidationException;
+import com.primus.server.exception.ValidationException;
 
 public interface Validable
 {

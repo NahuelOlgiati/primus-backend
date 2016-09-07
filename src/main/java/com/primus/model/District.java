@@ -12,11 +12,10 @@ import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
-//import com.ebizlink.adonis.common.service.msg.DBSMsgHandler;
-import com.ebizlink.pandora2.core.msg.MessageBuilder;
-import com.ebizlink.pandora2.core.util.CompareUtil;
-import com.ebizlink.pandora2.server.exception.ValidationException;
-import com.ebizlink.pandora2.server.model.BaseSummarySimpleModel;
+import com.primus.core.msg.MessageBuilder;
+import com.primus.core.util.CompareUtil;
+import com.primus.server.exception.ValidationException;
+import com.primus.server.model.BaseSummarySimpleModel;
 
 @Entity
 @Table(name = "adonis_config_district")

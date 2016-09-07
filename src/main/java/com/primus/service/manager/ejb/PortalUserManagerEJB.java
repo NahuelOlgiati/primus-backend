@@ -13,14 +13,14 @@ import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 
-import com.ebizlink.pandora2.core.exception.BaseException;
-import com.ebizlink.pandora2.core.util.CompareUtil;
-import com.ebizlink.pandora2.server.ejb.util.PredicateBuilder;
-import com.ebizlink.pandora2.server.exception.ManagerException;
+import com.primus.core.exception.BaseException;
+import com.primus.core.util.CompareUtil;
 import com.primus.model.PortalUser;
 import com.primus.model.TaxPayer;
 import com.primus.model.composite.Document;
 import com.primus.model.enumeration.TaxPayerTypeEnum;
+import com.primus.server.exception.ManagerException;
+import com.primus.server.util.PredicateBuilder;
 import com.primus.service.manager.local.PortalUserManagerLocal;
 
 

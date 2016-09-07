@@ -1,4 +1,4 @@
-package com.ebizlink.pandora2.server.model.mpi;
+package com.primus.server.model.mpi;
 
 public interface Describable
 {

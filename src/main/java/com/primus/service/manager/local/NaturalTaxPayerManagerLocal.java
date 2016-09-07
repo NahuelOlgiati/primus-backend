@@ -4,10 +4,10 @@ import java.util.List;
 
 import javax.ejb.Local;
 
-import com.ebizlink.pandora2.server.ejb.BaseSimpleManager;
-import com.ebizlink.pandora2.server.model.support.QueryHint;
 import com.primus.model.NaturalTaxPayer;
 import com.primus.model.composite.Document;
+import com.primus.server.ejb.BaseSimpleManager;
+import com.primus.server.model.support.QueryHint;
 
 @Local
 public interface NaturalTaxPayerManagerLocal extends BaseTaxPayerManagerLocal<NaturalTaxPayer>, BaseSimpleManager<NaturalTaxPayer>

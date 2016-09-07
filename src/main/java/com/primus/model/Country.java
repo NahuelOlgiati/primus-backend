@@ -9,8 +9,8 @@ import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
-import com.ebizlink.pandora2.core.util.CompareUtil;
-import com.ebizlink.pandora2.server.model.BaseSummarySimpleModel;
+import com.primus.core.util.CompareUtil;
+import com.primus.server.model.BaseSummarySimpleModel;
 
 @Entity
 @Table(name = "adonis_config_country")

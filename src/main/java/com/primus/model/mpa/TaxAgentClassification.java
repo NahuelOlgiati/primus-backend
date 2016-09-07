@@ -7,7 +7,7 @@ import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 import javax.persistence.SequenceGenerator;
 
-import com.ebizlink.pandora2.server.model.BaseSummarySimpleModel;
+import com.primus.server.model.BaseSummarySimpleModel;
 
 @MappedSuperclass
 //@Audited

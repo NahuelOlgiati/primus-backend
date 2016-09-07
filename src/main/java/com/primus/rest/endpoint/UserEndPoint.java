@@ -11,14 +11,14 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-import com.ebizlink.pandora2.core.util.CompareUtil;
-import com.ebizlink.pandora2.server.ejb.BaseEJB;
-import com.ebizlink.pandora2.server.exception.ManagerException;
-import com.ebizlink.pandora2.server.model.support.QueryHint;
+import com.primus.core.util.CompareUtil;
 import com.primus.model.PortalUser;
 import com.primus.rest.annotation.RequiredRole;
 import com.primus.rest.app.RoleEnum;
 import com.primus.rest.util.ResponseUtil;
+import com.primus.server.ejb.BaseEJB;
+import com.primus.server.exception.ManagerException;
+import com.primus.server.model.support.QueryHint;
 import com.primus.service.manager.local.PortalUserManagerLocal;
 
 @Stateless

@@ -1,6 +1,6 @@
 package com.primus.model.enumeration;
 
-import com.ebizlink.pandora2.server.model.mpi.LabeledValued;
+import com.primus.server.model.mpi.LabeledValued;
 
 public enum PhoneTypeEnum implements LabeledValued<PhoneTypeEnum>
 {

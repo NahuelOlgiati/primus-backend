@@ -1,6 +1,6 @@
-package com.ebizlink.pandora2.server.model.mpi;
+package com.primus.server.model.mpi;
 
-import com.ebizlink.pandora2.server.model.BaseModel;
+import com.primus.server.model.BaseModel;
 
 public interface Clonable<T extends BaseModel>
 {

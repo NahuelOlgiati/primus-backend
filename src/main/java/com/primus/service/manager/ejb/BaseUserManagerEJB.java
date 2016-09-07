@@ -16,19 +16,19 @@ import javax.persistence.criteria.Path;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 
-import com.ebizlink.pandora2.core.exception.BaseException;
-import com.ebizlink.pandora2.core.util.CompareUtil;
-import com.ebizlink.pandora2.server.ejb.BasePersistenceManagerEJB;
-import com.ebizlink.pandora2.server.ejb.util.PredicateBuilder;
-import com.ebizlink.pandora2.server.exception.ManagerException;
-import com.ebizlink.pandora2.server.exception.ValidationException;
-import com.ebizlink.pandora2.server.model.support.QueryHint;
-import com.ebizlink.pandora2.web.util.QueryHintResult;
+import com.primus.core.exception.BaseException;
+import com.primus.core.util.CompareUtil;
 import com.primus.model.DocumentType;
 import com.primus.model.Profile;
 import com.primus.model.SystemAgent;
 import com.primus.model.User;
 import com.primus.model.composite.Document;
+import com.primus.server.ejb.BasePersistenceManagerEJB;
+import com.primus.server.exception.ManagerException;
+import com.primus.server.exception.ValidationException;
+import com.primus.server.model.support.QueryHint;
+import com.primus.server.util.PredicateBuilder;
+import com.primus.server.util.QueryHintResult;
 import com.primus.service.manager.local.BaseUserManagerLocal;
 
 public abstract class BaseUserManagerEJB<T extends User> extends BasePersistenceManagerEJB<T> implements BaseUserManagerLocal<T>

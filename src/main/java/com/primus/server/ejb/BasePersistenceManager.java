@@ -1,7 +1,7 @@
-package com.ebizlink.pandora2.server.ejb;
+package com.primus.server.ejb;
 
-import com.ebizlink.pandora2.server.exception.ManagerException;
-import com.ebizlink.pandora2.server.model.BaseModel;
+import com.primus.server.exception.ManagerException;
+import com.primus.server.model.BaseModel;
 
 public interface BasePersistenceManager<T extends BaseModel> extends BaseManager<T>
 {

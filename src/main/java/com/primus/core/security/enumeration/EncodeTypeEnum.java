@@ -1,6 +1,6 @@
-package com.ebizlink.pandora2.core.security.enumeration;
+package com.primus.core.security.enumeration;
 
-import com.ebizlink.pandora2.server.model.mpi.Valued;
+import com.primus.server.model.mpi.Valued;
 
 public enum EncodeTypeEnum implements Valued<String>
 {

@@ -1,4 +1,4 @@
-package com.ebizlink.pandora2.server.ejb;
+package com.primus.server.ejb;
 
 import java.security.Principal;
 
@@ -8,8 +8,8 @@ import javax.ejb.SessionContext;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-import com.ebizlink.pandora2.core.exception.BaseException;
-import com.ebizlink.pandora2.server.model.BaseRevisionModel;
+import com.primus.core.exception.BaseException;
+import com.primus.server.model.BaseRevisionModel;
 
 public abstract class BaseEJB {
 	

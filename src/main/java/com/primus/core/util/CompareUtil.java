@@ -1,12 +1,13 @@
-package com.ebizlink.pandora2.core.util;
+package com.primus.core.util;
 
 import java.math.BigDecimal;
 import java.util.Collection;
 import java.util.Date;
 import java.util.Map;
-import com.ebizlink.pandora2.server.model.BaseModel;
-import com.ebizlink.pandora2.server.model.mpi.Emptiable;
-import com.ebizlink.pandora2.web.util.QueryHintResult;
+
+import com.primus.server.model.BaseModel;
+import com.primus.server.model.mpi.Emptiable;
+import com.primus.server.util.QueryHintResult;
 
 public final class CompareUtil
 {

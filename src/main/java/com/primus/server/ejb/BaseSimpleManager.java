@@ -1,8 +1,8 @@
-package com.ebizlink.pandora2.server.ejb;
+package com.primus.server.ejb;
 
-import com.ebizlink.pandora2.server.model.BaseModel;
-import com.ebizlink.pandora2.server.model.support.QueryHint;
-import com.ebizlink.pandora2.web.util.QueryHintResult;
+import com.primus.server.model.BaseModel;
+import com.primus.server.model.support.QueryHint;
+import com.primus.server.util.QueryHintResult;
 
 public interface BaseSimpleManager<T extends BaseModel>
 {

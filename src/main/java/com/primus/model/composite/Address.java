@@ -9,15 +9,14 @@ import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
-//import com.ebizlink.adonis.common.service.msg.DBSMsgHandler;
-import com.ebizlink.pandora2.core.msg.MessageBuilder;
-import com.ebizlink.pandora2.core.util.CompareUtil;
-import com.ebizlink.pandora2.server.exception.ValidationException;
-import com.ebizlink.pandora2.server.model.mpi.Describable;
-import com.ebizlink.pandora2.server.model.mpi.Emptiable;
-import com.ebizlink.pandora2.server.model.mpi.Validable;
+import com.primus.core.msg.MessageBuilder;
+import com.primus.core.util.CompareUtil;
 import com.primus.model.Street;
 import com.primus.model.Zone;
+import com.primus.server.exception.ValidationException;
+import com.primus.server.model.mpi.Describable;
+import com.primus.server.model.mpi.Emptiable;
+import com.primus.server.model.mpi.Validable;
 
 @Embeddable
 @SuppressWarnings("serial")

@@ -1,6 +1,6 @@
-package com.ebizlink.pandora2.server.ejb;
+package com.primus.server.ejb;
 
-import com.ebizlink.pandora2.server.model.BaseRevisionModel;
+import com.primus.server.model.BaseRevisionModel;
 
 public interface BaseRevisionManager<T extends BaseRevisionModel>
 {

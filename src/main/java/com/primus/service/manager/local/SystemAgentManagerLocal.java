@@ -2,10 +2,10 @@ package com.primus.service.manager.local;
 
 import javax.ejb.Local;
 
-import com.ebizlink.pandora2.server.ejb.BasePersistenceManager;
-import com.ebizlink.pandora2.server.exception.ManagerException;
 import com.primus.model.SystemAgent;
 import com.primus.model.composite.Document;
+import com.primus.server.ejb.BasePersistenceManager;
+import com.primus.server.exception.ManagerException;
 
 @Local
 public interface SystemAgentManagerLocal extends BasePersistenceManager<SystemAgent> {

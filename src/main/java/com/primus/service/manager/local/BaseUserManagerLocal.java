@@ -2,14 +2,14 @@ package com.primus.service.manager.local;
 
 import java.util.List;
 
-import com.ebizlink.pandora2.server.ejb.BasePersistenceManager;
-import com.ebizlink.pandora2.server.ejb.BaseSimpleManager;
-import com.ebizlink.pandora2.server.exception.ManagerException;
-import com.ebizlink.pandora2.server.model.support.QueryHint;
-import com.ebizlink.pandora2.web.util.QueryHintResult;
 import com.primus.model.Profile;
 import com.primus.model.User;
 import com.primus.model.composite.Document;
+import com.primus.server.ejb.BasePersistenceManager;
+import com.primus.server.ejb.BaseSimpleManager;
+import com.primus.server.exception.ManagerException;
+import com.primus.server.model.support.QueryHint;
+import com.primus.server.util.QueryHintResult;
 
 public interface BaseUserManagerLocal<T extends User> extends BasePersistenceManager<T>, BaseSimpleManager<T>
 {

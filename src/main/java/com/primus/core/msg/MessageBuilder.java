@@ -1,4 +1,4 @@
-package com.ebizlink.pandora2.core.msg;
+package com.primus.core.msg;
 
 import java.util.ArrayList;
 import java.util.List;
