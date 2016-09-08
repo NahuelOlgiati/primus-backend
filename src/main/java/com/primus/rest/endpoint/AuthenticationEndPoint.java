@@ -114,16 +114,16 @@ public class AuthenticationEndPoint extends BaseEJB {
 			@Context HttpServletRequest servletRequest) {
 		try {
 			final PortalUser user = portalUserML.getFULL(username);
-			user.getTaxPayer().initLazyElements();
 			if (CompareUtil.isEmpty(user)) {
 				return ResponseUtil.notFound();
 			}
+			user.getTaxPayer().initLazyElements();
 
-			servletRequest.login(username, password); // Jaas
+			// servletRequest.login(username, password); // Jaas
 			String token = authenticationCTX.register(user);
 			return ResponseUtil.success(token);
-		} catch (ServletException e) {
-			return ResponseUtil.notFound();
+			// } catch (ServletException e) {
+			// return ResponseUtil.notFound();
 		} catch (Exception e) {
 			return ResponseUtil.fatalException();
 		}
